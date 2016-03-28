@@ -14,6 +14,8 @@ It does not offer the same degree of customizability, as it only provides a
 subset of the original widgets. Code clean-up brought a drop of ~4% CPU usage in
 Companion 2.1 simulation.
 
+![](https://github.com/lynix/opentx-telemetry/blob/master/screenshot.png)
+
 ## Usage
 * copy _telemetry.lua_ and the _GFX_ folder to _/SCRIPTS/TELEMETRY/_ on the
   taranis sd card
