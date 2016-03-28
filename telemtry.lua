@@ -78,26 +78,16 @@ local function rssiWidget(xCoord,yCoord)
     end
 
     local pixmap = "/SCRIPTS/TELEMETRY/GFX/RSSIh00.bmp"
-    if percent > 90 then
-        pixmap = "/SCRIPTS/TELEMETRY/GFX/RSSIh10.bmp"
-    elseif percent > 80 then
-        pixmap = "/SCRIPTS/TELEMETRY/GFX/RSSIh09.bmp"
-    elseif percent > 70 then
-        pixmap = "/SCRIPTS/TELEMETRY/GFX/RSSIh08.bmp"
-    elseif percent > 60 then
-        pixmap = "/SCRIPTS/TELEMETRY/GFX/RSSIh07.bmp"
-    elseif percent > 50 then
-        pixmap = "/SCRIPTS/TELEMETRY/GFX/RSSIh06.bmp"
-    elseif percent > 40 then
-        pixmap = "/SCRIPTS/TELEMETRY/GFX/RSSIh05.bmp"
-    elseif percent > 30 then
-        pixmap = "/SCRIPTS/TELEMETRY/GFX/RSSIh04.bmp"
-    elseif percent > 20 then
-        pixmap = "/SCRIPTS/TELEMETRY/GFX/RSSIh03.bmp"
-    elseif percent > 10 then
-        pixmap = "/SCRIPTS/TELEMETRY/GFX/RSSIh02.bmp"
-    elseif percent > 0 then
-        pixmap = "/SCRIPTS/TELEMETRY/GFX/RSSIh01.bmp"
+    if percent > 90 then pixmap = "/SCRIPTS/TELEMETRY/GFX/RSSIh10.bmp"
+    elseif percent > 80 then pixmap = "/SCRIPTS/TELEMETRY/GFX/RSSIh09.bmp"
+    elseif percent > 70 then pixmap = "/SCRIPTS/TELEMETRY/GFX/RSSIh08.bmp"
+    elseif percent > 60 then pixmap = "/SCRIPTS/TELEMETRY/GFX/RSSIh07.bmp"
+    elseif percent > 50 then pixmap = "/SCRIPTS/TELEMETRY/GFX/RSSIh06.bmp"
+    elseif percent > 40 then pixmap = "/SCRIPTS/TELEMETRY/GFX/RSSIh05.bmp"
+    elseif percent > 30 then pixmap = "/SCRIPTS/TELEMETRY/GFX/RSSIh04.bmp"
+    elseif percent > 20 then pixmap = "/SCRIPTS/TELEMETRY/GFX/RSSIh03.bmp"
+    elseif percent > 10 then pixmap = "/SCRIPTS/TELEMETRY/GFX/RSSIh02.bmp"
+    elseif percent > 0  then pixmap = "/SCRIPTS/TELEMETRY/GFX/RSSIh01.bmp"
     end
 
     lcd.drawPixmap(xCoord+4, yCoord+1, pixmap)
@@ -202,27 +192,18 @@ local function gpsWidget(xCoord,yCoord)
     local fix  = (simModeOn == 1) and tfix or getValue("Fix")
 
     local fixImg = "/SCRIPTS/TELEMETRY/GFX/sat0.bmp"
-    if fix == 2 then
-        fixImg = "/SCRIPTS/TELEMETRY/GFX/sat1.bmp"
-    elseif fix == 3 then
-        fixImg = "/SCRIPTS/TELEMETRY/GFX/sat2.bmp"
-    elseif fix == 4 then
-        fixImg = "/SCRIPTS/TELEMETRY/GFX/sat3.bmp"
+    if fix == 2 then fixImg = "/SCRIPTS/TELEMETRY/GFX/sat1.bmp"
+    elseif fix == 3 then fixImg = "/SCRIPTS/TELEMETRY/GFX/sat2.bmp"
+    elseif fix == 4 then fixImg = "/SCRIPTS/TELEMETRY/GFX/sat3.bmp"
     end
 
     local satImg = "/SCRIPTS/TELEMETRY/GFX/gps_0.bmp"
-    if sats > 5 then
-        satImg = "/SCRIPTS/TELEMETRY/GFX/gps_6.bmp"
-    elseif sats > 4 then
-        satImg = "/SCRIPTS/TELEMETRY/GFX/gps_5.bmp"
-    elseif sats > 3 then
-        satImg = "/SCRIPTS/TELEMETRY/GFX/gps_4.bmp"
-    elseif sats > 2 then
-        satImg = "/SCRIPTS/TELEMETRY/GFX/gps_3.bmp"
-    elseif sats > 1 then
-        satImg = "/SCRIPTS/TELEMETRY/GFX/gps_2.bmp"
-    elseif sats > 0 then
-        satImg = "/SCRIPTS/TELEMETRY/GFX/gps_1.bmp"
+    if sats > 5 then satImg = "/SCRIPTS/TELEMETRY/GFX/gps_6.bmp"
+    elseif sats > 4 then satImg = "/SCRIPTS/TELEMETRY/GFX/gps_5.bmp"
+    elseif sats > 3 then satImg = "/SCRIPTS/TELEMETRY/GFX/gps_4.bmp"
+    elseif sats > 2 then satImg = "/SCRIPTS/TELEMETRY/GFX/gps_3.bmp"
+    elseif sats > 1 then satImg = "/SCRIPTS/TELEMETRY/GFX/gps_2.bmp"
+    elseif sats > 0 then satImg = "/SCRIPTS/TELEMETRY/GFX/gps_1.bmp"
     end
 
     lcd.drawPixmap(xCoord+1, yCoord+1, fixImg)
